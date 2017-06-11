@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 May, 2011 1:24:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="cms" name="com.cms.hib.TbCourses" table="tb_courses">
+    <id name="CId" type="string">
+      <column length="20" name="c_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="CDid" type="string">
+      <column length="25" name="c_did"/>
+    </property>
+    <property name="CName" type="string">
+      <column length="45" name="c_name"/>
+    </property>
+    <property name="CStartdate" type="date">
+      <column length="10" name="c_startdate"/>
+    </property>
+    <property name="CAbb" type="string">
+      <column length="45" name="c_abb"/>
+    </property>
+  </class>
+</hibernate-mapping>

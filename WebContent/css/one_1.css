@@ -1,0 +1,15 @@
+.a
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+z-index:auto;
+caption-side:top;
+color:#006633;
+}
+.b
+{
+table-layout:auto;
+border-color:#339999;
+border:2px;
+border-color:#33CCCC;
+}

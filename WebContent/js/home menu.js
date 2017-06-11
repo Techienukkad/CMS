@@ -1,0 +1,16 @@
+stm_bm(["menu7c0f",400,"","blank.gif",0,"","",0,0,250,0,1000,1,0,0,""],this);
+stm_bp("p0",[0,4,0,0,1,10,0,0,100,"",-2,"",-2,90,1,3,"#cccccc","#000066","",3,2,12,"#ccff00"]);
+stm_ai("p0i0",[0,"HOME","","",-1,-1,0,"","_self","","","","",0,0,0,"","",0,0,0,0,1,"#cc3300",0,"#ddc426",0,"","",3,3,0,0,"#0099cc","#cccccc","#ffffff","#000000","9pt Arial","9pt Arial",0,0]);
+stm_ai("p0i1",[6,1,"#000000","",-1,-1,0]);
+stm_aix("p0i2","p0i0",[0,"Admission"]);
+stm_bp("p1",[1,4,117,1,0,4,0,0,85,"progid:DXImageTransform.Microsoft.Checkerboard(squaresX=16,squaresY=16,direction=right,enabled=0,Duration=0.20)",10,"",-2,90,0,0,"#000000","#ffffff","",3,0,0,"#ffffff #a3a3a3 #a3a3a3 #ffffff"]);
+stm_aix("p1i0","p0i0",[0,"Procedure","","",-1,-1,0,"","_self","","","","",0,0,0,"","",0,0,0,0,1,"#ddc426",0,"#cc3300",0,"","",3,3,1,1,"#ffffff","#ffffff","#ffffff","#ffffff","bold 9pt Arial"]);
+stm_aix("p1i1","p1i0",[0,"Important Dates"]);
+stm_aix("p1i2","p1i0",[0,"Online Application"]);
+stm_ep();
+stm_aix("p0i3","p0i1",[]);
+stm_aix("p0i4","p0i0",[0,"Courses"]);
+stm_aix("p0i5","p0i0",[0,"Facilities"]);
+stm_aix("p0i6","p0i0",[0,"Alumni"]);
+stm_ep();
+stm_em();

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 May, 2011 1:24:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="cms" name="com.cms.hib.TbFaculty" table="tb_faculty">
+    <id name="FId" type="string">
+      <column length="25" name="f_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="FFirstname" type="string">
+      <column length="45" name="f_firstname"/>
+    </property>
+    <property name="FLastname" type="string">
+      <column length="45" name="f_lastname"/>
+    </property>
+    <property name="FDid" type="string">
+      <column length="25" name="f_Did"/>
+    </property>
+    <property name="FGender" type="string">
+      <column length="45" name="f_gender"/>
+    </property>
+    <property name="FDob" type="date">
+      <column length="10" name="f_dob"/>
+    </property>
+    <property name="FAddress" type="string">
+      <column length="45" name="f_address"/>
+    </property>
+    <property name="FCity" type="string">
+      <column length="45" name="f_city"/>
+    </property>
+    <property name="FState" type="string">
+      <column length="45" name="f_state"/>
+    </property>
+    <property name="FEmail" type="string">
+      <column length="45" name="f_email"/>
+    </property>
+    <property name="FQualification" type="string">
+      <column length="45" name="f_qualification"/>
+    </property>
+    <property name="FExperience" type="java.lang.Integer">
+      <column name="f_experience"/>
+    </property>
+    <property name="FDesignation" type="string">
+      <column length="45" name="f_designation"/>
+    </property>
+    <property name="FJoindate" type="date">
+      <column length="19" name="f_joindate"/>
+    </property>
+    <property name="FImage" type="string">
+      <column length="45" name="f_image"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 May, 2011 1:24:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="cms" name="com.cms.hib.TbStudent" table="tb_student">
+    <id name="SId" type="string">
+      <column name="s_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="SFirstname" type="string">
+      <column length="45" name="s_firstname"/>
+    </property>
+    <property name="SLastname" type="string">
+      <column length="45" name="s_lastname"/>
+    </property>
+    <property name="SFather" type="string">
+      <column length="45" name="s_father"/>
+    </property>
+    <property name="SMother" type="string">
+      <column length="45" name="s_mother"/>
+    </property>
+    <property name="SSession" type="string">
+      <column length="45" name="s_session"/>
+    </property>
+    <property name="SClass" type="string">
+      <column length="45" name="s_class"/>
+    </property>
+    <property name="SGender" type="string">
+      <column length="45" name="s_gender"/>
+    </property>
+    <property name="SDob" type="date">
+      <column length="10" name="s_dob"/>
+    </property>
+    <property name="SAddress" type="string">
+      <column length="4000" name="s_address"/>
+    </property>
+    <property name="SCity" type="string">
+      <column length="45" name="s_city"/>
+    </property>
+    <property name="SState" type="string">
+      <column length="45" name="s_state"/>
+    </property>
+    <property name="SEmail" type="string">
+      <column length="45" name="s_email"/>
+    </property>
+    <property name="SContact" type="string">
+      <column length="45" name="s_contact"/>
+    </property>
+    <property name="SImage" type="string">
+      <column length="1000" name="s_image"/>
+    </property>
+    <property name="STenth" type="string">
+      <column length="45" name="s_tenth"/>
+    </property>
+    <property name="STwelth" type="string">
+      <column length="45" name="s_twelth"/>
+    </property>
+    <property name="SGraduation" type="string">
+      <column length="45" name="s_graduation"/>
+    </property>
+    <property name="SNationality" type="string">
+      <column length="45" name="s_nationality"/>
+    </property>
+  </class>
+</hibernate-mapping>

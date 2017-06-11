@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 May, 2011 1:24:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="cms" name="com.cms.hib.TbLogin" table="tb_login">
+    <id name="LUser" type="big_decimal">
+      <column name="l_user" precision="25" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="LPassword" type="string">
+      <column length="45" name="l_password" not-null="true"/>
+    </property>
+    <property name="LType" type="string">
+      <column length="45" name="l_type" not-null="true"/>
+    </property>
+    <property name="LLastlogin" type="date">
+      <column length="10" name="l_lastlogin"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 May, 2011 1:24:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="cms" name="com.cms.hib.TbDepartment" table="tb_department">
+    <id name="DId" type="string">
+      <column length="25" name="d_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="DName" type="string">
+      <column length="45" name="d_name"/>
+    </property>
+    <property name="DHod" type="string">
+      <column length="45" name="d_hod"/>
+    </property>
+    <property name="DTimetable" type="string">
+      <column length="45" name="d_timetable"/>
+    </property>
+  </class>
+</hibernate-mapping>

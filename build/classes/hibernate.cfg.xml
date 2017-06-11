@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cms</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <mapping resource="com/cms/hib/TbLogin.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbFaculty.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbCourses.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbAdmin.hbm.xml"/>
+    <mapping resource="com/cms/hib/Login.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbStudent.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbDepartment.hbm.xml"/>
+    <mapping resource="com/cms/hib/Notice.hbm.xml"/>
+    <mapping resource="com/cms/hib/TbSession.hbm.xml"/>
+    <mapping resource="com/cms/hib/Auto.hbm.xml"/>
+    <mapping resource="com/cms/hib/Sender.hbm.xml"/>
+    <mapping resource="com/cms/hib/Message.hbm.xml"/>
+    <mapping resource="com/cms/hib/Recivemessage.hbm.xml"/>
+    <mapping resource="com/cms/hib/Chpass.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

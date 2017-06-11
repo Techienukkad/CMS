@@ -1,0 +1,268 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="login" class="com.cms.action.LoginAction">
+            <result name="success">/success.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+
+        <action name="sess" class="com.cms.action.FetchSession">
+            <result>/sesslist.jsp</result>
+        </action>
+        
+        <action name="logout" class="com.cms.action.Logout">
+            <result name="success">index.jsp</result>
+        </action>
+
+        <action name="updatePass" class="com.cms.action.LoginAction"  method="updatePass">
+            <result>adpro.jsp</result>
+
+</action>
+
+<action name="ques" class="com.cms.action.forgetPassword">
+            <result name="input">newjsp.jsp</result>
+            <result name="success">question.jsp</result>
+</action>
+
+<action name="updatefPass" class="com.cms.action.LoginAction"  method="updatefPass">
+            <result>fprofile.jsp</result>
+
+</action>
+            <action name="updatesPass" class="com.cms.action.LoginAction"  method="updatesPass">
+            <result>profile.jsp</result>
+            
+        </action>
+
+        <action name="updateDPass" class="com.cms.action.LoginAction"  method="updateDPass">
+
+            <result >depro.jsp</result>
+        </action>
+
+        <action name="search" class="com.cms.action.Search"  >
+            <result>searchResults.jsp</result>
+        </action>
+        <action name="sendmsg" class="com.cms.action.MessageAction">
+            <result>sendmessage.jsp</result>
+        </action>
+
+        <action name="course" class="com.cms.action.Search"  method="course">
+            <result>studentview.jsp</result>
+        </action>
+        <action name="student" class="com.cms.action.Search"  method="student1">
+            <result>studentview.jsp</result>
+        </action>
+
+        <action name="deleteStu" class="com.cms.action.Search"  method="deleteStu">
+            <result>studentview.jsp</result>
+        </action>
+
+
+        <action name="editStudent" class="com.cms.action.editStudent">
+            <interceptor-ref name="fileUpload">
+                <param name="maximumSize">2097152</param>
+                <param name="allowedTypes">image/png,image/gif,image/jpeg</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="success">profile.jsp</result>
+            <result name="input">editStudent.jsp</result>
+	</action>
+
+         <action name="editFaculty" class="com.cms.action.editFaculty">
+            <interceptor-ref name="fileUpload">
+                <param name="maximumSize">2097152</param>
+                <param name="allowedTypes">image/png,image/gif,image/jpeg</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="success">fprofile.jsp</result>
+            <result name="input">editFaculty.jsp</result>
+	</action>
+
+        <action name="deptAction" class="com.cms.action.deptAction"  >
+            <result>department.jsp</result>
+        </action>
+
+        <action name="studentview" class="com.cms.action.studentview"  >
+            <result>studentview.jsp</result>
+        </action>
+
+        <action name="fetchDept" class="com.cms.action.deptAction" method="fetchDept" >
+            <result name="success">deptlist.jsp</result>
+        </action>
+         <action name="insert" class="com.cms.action.deptAction" method="insert" >
+            <result name="success">department.jsp</result>
+        </action>
+         <action name="fetch" class="com.cms.action.deptAction" method="fetch" >
+            <result name="success">department.jsp</result>
+        </action>
+
+         <action name="fetchup" class="com.cms.action.deptAction" method="fetchup" >
+            <result name="success">updepartment.jsp</result>
+        </action>
+
+         <action name="fetchup1" class="com.cms.action.deptAction" method="fetchup1" >
+            <result name="success">dedepartment.jsp</result>
+        </action>
+
+        <action name="updept" class="com.cms.action.deptAction" method="updept" >
+            <result name="success">department.jsp</result>
+        </action>
+
+        <action name="dedept" class="com.cms.action.deptAction" method="dedept" >
+            <result name="success">department.jsp</result>
+        </action>
+
+        <action name="key" class="com.cms.action.Faculty" method="key">
+            <result>factact.jsp</result>
+        </action>
+
+        <action name="insertData" class="com.cms.action.Faculty" method="insertData" >
+            <result name="success">factact.jsp</result>
+        </action>
+
+        <action name="fetchDepartment" class="com.cms.action.LoginAction" method="fetchDepartment" >
+            <result name="success">facultyview.jsp</result>
+        </action>
+
+        <action name="updateFaculty" class="com.cms.action.Faculty" method="updateFaculty" >
+            <result name="success">factact.jsp</result>
+        </action>
+
+         
+
+         <action name="deleteFaculty" class="com.cms.action.Faculty" method="deleteFaculty" >
+            <result name="success">factact.jsp</result>
+        </action>
+
+        <action name="upFact" class="com.cms.action.Faculty" method="upFact" >
+            <result name="success">updateFaculty.jsp</result>
+        </action>
+
+        <action name="cKey" class="com.cms.action.Course" method="cKey" >
+            <result name="success">courseAct.jsp</result>
+        </action>
+
+        <action name="addCourse" class="com.cms.action.Course" method="addCourse">
+            <result name="success">courseAct.jsp</result>
+        </action>
+
+        <action name="upCourse" class="com.cms.action.Course" method="upCourse">
+            <result name="success">updateCourse.jsp</result>
+        </action>
+
+        <action name="updateCourse" class="com.cms.action.Course" method="updateCourse">
+            <result name="success">courseAct.jsp</result>
+        </action>
+
+        <action name="deleteCourse" class="com.cms.action.Course" method="deleteCourse">
+            <result name="success">courseAct.jsp</result>
+        </action>
+
+        <action name="sKey" class="com.cms.action.Student" method="sKey">
+            <result name="success">
+                stuAct.jsp
+            </result>
+</action>
+            <action name="addStudent" class="com.cms.action.Student" method="addStudent">
+            <result name="success">
+                stuAct.jsp
+            </result>
+
+        </action>
+
+        <action name="my" class="com.cms.action.My">
+            <result name="success">
+                courselist.jsp
+            </result>
+
+        </action>
+
+
+
+        <action name="checkAnswer" class="com.cms.action.forgetPassword" method="checkAnswer">
+            <result name="input">forgetPassword.jsp</result>
+            <result name="success">changePassword.jsp</result>
+
+        </action>
+
+
+        <action name="upNewPass" class="com.cms.action.forgetPassword" method="upNewPass">
+            <result name="input">changePassword.jsp</result>
+            <result name="success">index.jsp</result>
+
+        </action>
+
+        <action name="uploadnotice" class="com.cms.action.UploadNotice">
+            <interceptor-ref name="fileUpload">
+                <param name="maximumSize">8097152</param>
+                <param name="allowedTypes">application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="input">changePassword.jsp</result>
+            <result name="success">notice.jsp</result>
+
+        </action>
+
+         <action name="mymessage" class="com.cms.action.MyMessage">
+            <result name="success">inbox.jsp</result>
+            <result name="input">compose.jsp</result>
+        </action>
+
+        <action name="Enter" class="com.cms.action.Enter">
+            <result name="success">index.jsp</result>
+        </action>
+
+
+        <action name="download" class="com.cms.action.Download">
+            <result name="success" type="stream">
+              <param name="contentType">application/pdf,application/msword</param>
+              <param name="inputName">file1</param>
+              <param name="contentDisposition">attachment;filename="${fileName}"</param>
+              <param name="bufferSize">1024</param>
+            </result>
+           
+        </action>
+
+        <action name="inoutbox" class="com.cms.action.inoutbox">
+            <result name="success">message.jsp</result>
+        </action>
+
+        <action name="showMessage" class="com.cms.action.inoutbox" method="showMessage">
+            <result name="success">showMessage.jsp</result>
+        </action>
+
+        <action name="deleteReceiver" class="com.cms.action.inoutbox" method="deleteR">
+            <result name="success">inbox.jsp</result>
+        </action>
+
+        <action name="setq" class="com.cms.action.setq">
+            <result name="success">setquestion.jsp</result>
+        </action>
+
+        <action name="upques" class="com.cms.action.setq" method="upques">
+            <result name="success">setquestion.jsp</result>
+        </action>
+        <action name="deleteNotice" class="com.cms.action.Enter" method="deleteNotice">
+            <result name="success">viewNoticeAdmin.jsp</result>
+        </action>
+
+        <action name="uploadtt" class="com.cms.action.uploadtt">
+            <result name="success">uploadtt.jsp</result>
+        </action>
+
+        <action name="uploadTime" class="com.cms.action.uploadtt" method="uploadtime">
+           <interceptor-ref name="fileUpload">
+                <param name="maximumSize">8097152</param>
+                <param name="allowedTypes">application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="input">uploadtt.jsp</result>
+            <result name="success">courseAct.jsp</result>
+        </action>
+    </package>
+
+    
+</struts>
